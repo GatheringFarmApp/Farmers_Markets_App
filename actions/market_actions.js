@@ -1,12 +1,13 @@
 import axios from 'axios';
 
-import { FETCH_MARKETS } from "./types";
-import config from "../config";
+import {FETCH_MARKETS} from "./types";
+
+const MARKETS_URL = "https://raw.githubusercontent.com/GatheringFarmApp/MarketsMapData/master/markets.json";
 
 export const fetchMarkets = (callback) => async (dispatch) => {
 
     try {
-        let { data } = await axios.get(config.marketsUrl);
+        let { data } = await axios.get(MARKETS_URL);
 
         dispatch({
             type: FETCH_MARKETS,
@@ -15,7 +16,7 @@ export const fetchMarkets = (callback) => async (dispatch) => {
 
         callback();
 
-    } catch(e) {
+    } catch (e) {
         // TODO error handling
         console.error(e);
     }

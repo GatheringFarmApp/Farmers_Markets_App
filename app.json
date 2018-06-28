@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "gathering-react-native",
-    "description": "This project is really great.",
+    "description": "Map view of London's farmers markets",
     "slug": "gathering-react-native",
     "privacy": "public",
     "sdkVersion": "27.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": ["ios"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

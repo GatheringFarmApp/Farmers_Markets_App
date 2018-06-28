@@ -33,20 +33,8 @@ export default class MarketMarker extends Component {
         return (
             <MapView.Marker
                 coordinate={market.coordinates}
-                onSelect={this.props.selectMarker}
-                onDeselect={this.props.deselectMarker}
                 style={styles.marker}
             >
-
-                {/*<View style={{ backgroundColor: 'white', borderRadius: 3 }}>*/}
-                    {/*<MapView.Callout*/}
-                        {/*style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-around', width: 200 }}*/}
-                        {/*onPress={() => {}}*/}
-                    {/*>*/}
-                        {/*<Text>{market.name}</Text>*/}
-                        {/*<Icon name="chevron-right" size={10} color="blue" />*/}
-                    {/*</MapView.Callout>*/}
-                {/*</View>*/}
 
                 <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-around' }}>
                     <Image
@@ -69,19 +57,11 @@ export default class MarketMarker extends Component {
     static propTypes = {
         market: PropTypes.object.isRequired,
         userLocation: PropTypes.object,
-        selectMarker: PropTypes.func,
-        deselectMarker: PropTypes.func,
-        navigate: PropTypes.func,
     }
 
 }
 
 const styles = StyleSheet.create({
-    marker: {
-        // flex: 1,
-        // height:60,
-        // width:60,
-    },
     markerImage: {
         borderRadius: 25,
         borderColor: '#000',
